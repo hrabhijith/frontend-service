@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+
+  frontend-service:
+    ports: 
+      - "8282:9092"
+  
+    image: "hrabhijith/frontend-service:latest"
+
+    environment: 
+      TARGET_ENVIRONMENT: ecohouse
+      _JAVA_OPTIONS: -Xmx512m -Xms50m
+
+    mem_limit: 1000m
